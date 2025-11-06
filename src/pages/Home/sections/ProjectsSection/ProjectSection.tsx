@@ -3,12 +3,29 @@ import ProjectCard, { ProjectCardProps } from "../../../../components/ProjectCar
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
 import projeto01 from "../../../../assets/images/projeto01.png";
 import projeto02 from "../../../../assets/images/projeto02.png";
+import projeto03 from "../../../../assets/images/projeto03.png";
 
 const ProjectsSection: React.FC = () => {
 
     const StyledExperience = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
+        paddingBottom: theme.spacing(6),
+    }));
 
+    const SectionTitle = styled(Typography)(({ theme }) => ({
+        position: "relative",
+        display: "inline-block",
+        '&::after': {
+            content: '""',
+            position: "absolute",
+            bottom: "-8px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "60px",
+            height: "4px",
+            background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.secondary.light})`,
+            borderRadius: "2px",
+        }
     }));
 
     const projects = [
@@ -20,6 +37,7 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: JavaScript, HTML, CSS, React, Node.js, Firebase",
             websiteURL: "https://ecopoint-web.vercel.app/",
             codeURL: "https://github.com/clodomilson-silva/Ecopoint_web",
+            featured: false,
         },
         {
             title: "School System Project",
@@ -29,19 +47,32 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: TypeScript, React, Node.js, Express, Firebase",
             websiteURL: "https://cdn.pixabay.com/photo/2017/10/26/17/51/under-construction-2891888_1280.jpg",
             codeURL: "https://github.com/clodomilson-silva/sistema-escolarfreq",
+            featured: false,
+        },
+        {
+            title: "Muller e Lisboa Website",
+            subtitle: "Oct 2025 - in progress",
+            srcImg: projeto03,
+            description: "A modern and responsive website for the construction company Muller & Lisboa, developed with React and Vite.",
+            technologies: "Technologies: JavaScript, HTML, CSS, React, Lucide React ",
+            websiteURL: "https://mullerelisboa.com.br/",
+            codeURL: "https://github.com/clodomilson-silva/muller_lisboa.git",
+            featured: false,
         },
     ]
 
     return (
         <StyledExperience>
             <Container maxWidth="lg">
-                <Box id="projects" pt={5} pb={3}>
-                    <Typography variant="h2" textAlign="center" color="primary.contrastText">Projects</Typography>
+                <Box id="projects" pt={8} pb={4}>
+                    <SectionTitle variant="h2" textAlign="center" color="primary.contrastText">
+                        Projects
+                    </SectionTitle>
                 </Box>
-                <Grid container spacing={5} pb={3}>
+                <Grid container spacing={4} pb={3}>
                     {projects.map((project: ProjectCardProps, index: number) => (
-                        <Grid item md={6} key={index}>
-                            <AnimationComponent moveDirection={index % 2 == 0 ? "right" : "left"}>
+                        <Grid item xs={12} md={6} key={index}>
+                            <AnimationComponent moveDirection={index % 2 === 0 ? "right" : "left"}>
                                 <ProjectCard
                                     title={project.title}
                                     subtitle={project.subtitle}
@@ -50,6 +81,7 @@ const ProjectsSection: React.FC = () => {
                                     technologies={project.technologies}
                                     websiteURL={project.websiteURL}
                                     codeURL={project.codeURL}
+                                    featured={project.featured}
                                 />
                             </AnimationComponent>
                         </Grid>

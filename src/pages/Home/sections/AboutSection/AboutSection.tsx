@@ -7,7 +7,6 @@ import CodeIcon from '@mui/icons-material/Code';
 import WebIcon from '@mui/icons-material/Web';
 import CloudIcon from '@mui/icons-material/Cloud';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
 
@@ -150,7 +149,7 @@ const AboutSection: React.FC = () => {
     const skillsSet = [
         { name: "Javascript", level: 90, color: "linear-gradient(135deg, #f7df1e 0%, #ffeb3b 100%)", textColor: "#000", icon: <JavascriptIcon sx={{ fontSize: "28px" }} /> },
         { name: "Python", level: 85, color: "linear-gradient(135deg, #3776ab 0%, #4dabf7 100%)", textColor: "#fff", icon: <CodeIcon sx={{ fontSize: "28px" }} /> },
-        { name: "Flutter", level: 75, color: "linear-gradient(135deg, #02569B 0%, #0175c2 100%)", textColor: "#fff", icon: <PhoneAndroidIcon sx={{ fontSize: "28px" }} /> },
+        { name: "React Native", level: 75, color: "linear-gradient(135deg, #02569B 0%, #0175c2 100%)", textColor: "#fff", icon: <PhoneAndroidIcon sx={{ fontSize: "28px" }} /> },
         { name: "React", level: 90, color: "linear-gradient(135deg, #61dafb 0%, #21c7fc 100%)", textColor: "#000", icon: <WebIcon sx={{ fontSize: "28px" }} /> },
         { name: "Django", level: 80, color: "linear-gradient(135deg, #092e20 0%, #0f5132 100%)", textColor: "#fff", icon: <CodeIcon sx={{ fontSize: "28px" }} /> },
         { name: "Node.js", level: 85, color: "linear-gradient(135deg, #339933 0%, #68c43a 100%)", textColor: "#fff", icon: <CodeIcon sx={{ fontSize: "28px" }} /> },
@@ -159,7 +158,7 @@ const AboutSection: React.FC = () => {
         { name: "Docker", level: 75, color: "linear-gradient(135deg, #2496ed 0%, #0db7ed 100%)", textColor: "#fff", icon: <CloudIcon sx={{ fontSize: "28px" }} /> },
         { name: "HTML/CSS", level: 95, color: "linear-gradient(135deg, #e34f26 0%, #f06529 100%)", textColor: "#fff", icon: <WebIcon sx={{ fontSize: "28px" }} /> },
         { name: "Firebase", level: 85, color: "linear-gradient(135deg, #ffca28 0%, #ffc107 100%)", textColor: "#000", icon: <CloudIcon sx={{ fontSize: "28px" }} /> },
-        { name: "Figma", level: 80, color: "linear-gradient(135deg, #f24e1e 0%, #ff6250 100%)", textColor: "#fff", icon: <DesignServicesIcon sx={{ fontSize: "28px" }} /> }
+        { name: "Google Cloud", level: 80, color: "linear-gradient(135deg, #4285f4 0%, #5a9dfb 100%)", textColor: "#fff", icon: <CloudIcon sx={{ fontSize: "28px" }} /> }
     ]
 
     return (
@@ -197,7 +196,7 @@ const AboutSection: React.FC = () => {
 
                 <Box pb={4} px={{ xs: 2, md: 4 }}>
                     <AboutText>
-                        I'm <strong>Clodomilson Silva</strong>, a developer with a passion for turning ideas into real digital solutions. On my GitHub account, <strong>clodomilson-silva</strong>, I share projects that demonstrate my versatility with technologies such as <strong>Python, JavaScript, PHP</strong> and modern frameworks—with special attention to code quality, versioning and automation.
+                        I'm <strong>Clodomilson Silva</strong>, a developer with a passion for turning ideas into real digital solutions. On my GitHub account, <strong>clodomilson-silva</strong>, I share projects that demonstrate my versatility with technologies such as <strong>Python, JavaScript</strong> and modern frameworks—with special attention to code quality, versioning and automation.
                     </AboutText>
                     <AboutText>
                         Recently, I've developed projects that reflect my ability to build <strong>interactive interfaces</strong> with good practices and responsiveness. Other repositories include practical implementations, tests and clear documentation, showing my commitment to each stage of the development cycle.

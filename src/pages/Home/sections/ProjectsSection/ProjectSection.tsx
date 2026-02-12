@@ -4,6 +4,7 @@ import AnimationComponent from "../../../../components/AnimationComponent/Animat
 import projeto01 from "../../../../assets/images/projeto01.png";
 import projeto02 from "../../../../assets/images/projeto02.png";
 import projeto03 from "../../../../assets/images/projeto03.png";
+import projeto04 from "../../../../assets/images/projeto04.png";
 
 const ProjectsSection: React.FC = () => {
 
@@ -57,6 +58,16 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: JavaScript, HTML, CSS, React, Lucide React ",
             websiteURL: "https://mullerelisboa.com.br/",
             codeURL: "https://github.com/clodomilson-silva/muller_lisboa.git",
+            featured: false,
+        },
+        {
+            title: "Loja DivertEduc",
+            subtitle: "2025 - in progress",
+            srcImg: projeto04,
+            description: "Educational and entertainment store project with complete e-commerce functionality.",
+            technologies: "Technologies: TypeScript, HTML, CSS, React",
+            websiteURL: "https://diverteduc.vercel.app/",
+            codeURL: "https://github.com/clodomilson-silva/Loja-DivertEduc.git",
             featured: false,
         },
     ]
